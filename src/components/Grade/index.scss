@@ -1,0 +1,63 @@
+.section-grade {
+  width: 100%;
+  position: relative;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+
+  .section-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 120px 20px 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      text-align: center;
+    }
+
+    .sticker-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .sticker1 {
+        padding: 20px;
+        .img {
+          width: 100%;
+          max-width: 400px;
+          margin-bottom: 20px;
+          filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.3));
+        }
+
+        .ribbon {
+          text-align: center;
+          padding: 10px 0;
+          margin-bottom: 20px;
+        }
+
+        .textbox {
+          text-align: center;
+          margin-bottom: 30px;
+          padding: 10px;
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 20px;
+        }
+      }
+
+      &.mobile {
+        flex-direction: column;
+      }
+    }
+
+    &.mobile {
+      padding-bottom: 150px;
+    }
+
+    &.tablet {
+      width: var(--tablet-width);
+      padding-bottom: 350px;
+    }
+  }
+}

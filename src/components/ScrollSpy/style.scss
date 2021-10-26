@@ -1,0 +1,102 @@
+.scrollspy {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+  z-index: 100;
+  visibility: visible;
+  opacity: 1;
+
+  &.hidden,
+  &.mobile,
+  &.tablet {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul li {
+    position: relative;
+    text-align: right;
+  }
+
+  ul li .dot {
+    color: #fff;
+    display: block;
+    padding: 0;
+  }
+
+  ul li .dot span {
+    display: inline-block;
+    letter-spacing: 1px;
+    padding: 10px 12px;
+    margin-right: 10px;
+    border-radius: 4px;
+    transform: translateX(15px);
+    opacity: 0;
+    color: #004367;
+    transition: 0.2s ease-out;
+    pointer-events: none;
+  }
+
+  ul li:hover .dot span {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  ul li .dot span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    width: 12px;
+    height: 1px;
+    border-top: 1px solid #004367;
+  }
+
+  ul li .dot::before,
+  ul li .dot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    display: block;
+    transition: 0.1s ease-out;
+  }
+
+  /* small dots */
+  ul li .dot::before {
+    height: 5px;
+    width: 5px;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  ul li .dot.isCurrent::before,
+  ul li:hover .dot::before {
+    border-color: #004367;
+    background: #004367;
+  }
+
+  ul li .dot::after {
+    height: 12px;
+    width: 12px;
+    border: 2px solid #004367;
+    right: -2px;
+    transform: translateY(-50%) scale(1);
+  }
+
+  ul li.isCurrent .dot::after,
+  ul li:hover .dot::after {
+    transform: translateY(-50%) scale(1);
+    background-color: #004367;
+  }
+}

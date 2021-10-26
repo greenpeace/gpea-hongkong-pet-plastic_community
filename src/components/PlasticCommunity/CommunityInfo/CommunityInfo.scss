@@ -1,0 +1,249 @@
+.section-communityinfo {
+  .district-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4px;
+    hr {
+      grid-column: 1 / -1;
+    }
+    .district {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 4px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease-in;
+      &[region="Hong Kong Island"] {
+        background-color: #ff7875;
+      }
+      &[region="Kowloon"] {
+        background-color: #69c0ff;
+      }
+      &[region="New Territories"] {
+        background-color: #95de64;
+      }
+      &.district--empty {
+        pointer-events: none;
+        background-color: #fafafa;
+      }
+      &:hover {
+        box-shadow: var(--shadow--md);
+        transform: translateY(-8px);
+      }
+    }
+    .district-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .num-flex {
+      font-size: 14px;
+    }
+  }
+
+  .district-panel {
+    filter: drop-shadow(var(--shadow--md));
+
+    .hero-part {
+      padding: 16px 20px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 10px;
+      border-radius: 20px 20px 0 0;
+
+      color: #fff;
+      background-color: var(--title);
+      // &[region="Hong Kong Island"] {
+      //   background-color: #ff7875;
+      // }
+      // &[region="Kowloon"] {
+      //   background-color: #69c0ff;
+      // }
+      // &[region="New Territories"] {
+      //   background-color: #95de64;
+      // }
+      .go-back {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .district-name {
+        font-weight: bold;
+        font-size: 2.4rem;
+        padding: 0;
+        line-height: 1;
+      }
+      .num-flex {
+        padding: 0;
+        line-height: 100%;
+
+        .num-restaurants,
+        .num-upvotes {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .upvote-part {
+      height: 64px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      .do-vote {
+        border-radius: 20px;
+        background-color: var(--title);
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+    .restaurant-list {
+      background-color: #fff;
+
+      padding-bottom: 20px;
+
+      min-height: 150px;
+      max-height: 200px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      position: relative;
+      transition: all 0.3s ease-out;
+
+      &.expand {
+        max-height: 800px;
+      }
+
+      .restaurant-row {
+        display: grid;
+        grid-template-columns: 40px 1fr 180px;
+        grid-auto-columns: minmax(400px, auto);
+        align-items: center;
+        border-bottom: 1px solid var(--border);
+        padding: 4px 20px;
+        .index {
+          grid-row-start: 1;
+          grid-row-end: 3;
+          display: flex;
+          align-items: flex-start;
+          height: 100%;
+          letter-spacing: 0;
+        }
+        &.first-row {
+          position: sticky;
+          top: 0;
+          border-bottom: 1px solid var(--border);
+          background-color: var(--title-light);
+          box-shadow: var(--shadow--base);
+
+          .right-part {
+            color: white;
+            text-align: center;
+            display: block !important;
+          }
+        }
+        .r-name {
+          font-weight: 800;
+          margin-right: 4px;
+          color: var(--text);
+        }
+        .r-address {
+          font-size: 16px;
+          color: var(--sub-text);
+          a {
+            margin-left: 0.5rem;
+          }
+        }
+        .right-part {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .badge {
+          text-align: center;
+          .v {
+            font-size: 16px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          grid-template-columns: 40px 1fr;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          &.first-row .right-part {
+            text-align: left;
+          }
+
+          .right-part {
+            grid-template-columns: repeat(2, 100px);
+
+            .badge {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-part {
+      height: 20px;
+      background-color: var(--title);
+      border-radius: 0 0 20px 20px;
+    }
+
+    .pin {
+      width: 18px;
+    }
+  }
+
+  .expand-container {
+    margin: 0 auto;
+    padding: 15px 0 0;
+    display: block;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-2px);
+      border-left: 1px dashed #a3a3a3;
+      height: 30px;
+      width: 0;
+    }
+
+    .loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 30px;
+    }
+
+    .btn-expand {
+      position: absolute;
+      top: 26px;
+      left: 50%;
+      padding: 0;
+      margin: 0;
+      line-height: 1;
+      transform: translateX(-50%);
+      color: #a3a3a3;
+      font-size: 25px;
+      text-shadow: none;
+
+      i {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}

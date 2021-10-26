@@ -1,0 +1,59 @@
+.footer {
+  width: 100%;
+  background-color: var(--title-light);
+  color: var(--text);
+  padding: 80px 20px 40px;
+  margin: 0;
+  position: relative;
+
+  .footer-content {
+    //width: 1000px;
+    width: 100%;
+    max-width: 1000px;
+    color: var(--text);
+    margin: 0 auto;
+    text-align: center;
+
+    .logo {
+      margin: 0 auto 20px;
+      height: 40px;
+      display: block;
+    }
+
+    p,
+    div {
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .copyright {
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+    }
+
+    .splite-line {
+      width: 30px;
+      border-top: 1px solid var(--text);
+      margin: 30px auto;
+    }
+
+    .notice p {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    &.mobile,
+    &.tablet {
+      padding-bottom: 90px;
+    }
+
+    &.desktop,
+    &.mobile {
+      width: 100%;
+    }
+
+    &.tablet {
+      width: 600px;
+    }
+  }
+}

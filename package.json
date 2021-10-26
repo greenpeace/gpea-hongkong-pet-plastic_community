@@ -1,0 +1,79 @@
+{
+  "name": "gpea-hongkong-pc",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:en": "PUBLIC_URL=https://change.greenpeace.org.hk/app/plastic-community react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build:en && gpea-npm-en-uploader"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "bulma": "^0.8.0",
+    "bulma-timeline": "^3.0.4",
+    "cc-validate": "^2.0.5",
+    "classnames": "^2.2.6",
+    "flexboxgrid": "^6.3.1",
+    "formik": "^2.1.1",
+    "framer-motion": "^1.8.3",
+    "gpea-npm-en-uploader": "greenpeace/gpea-npm-en-uploader",
+    "lodash": "^4.17.20",
+    "mitt": "^1.2.0",
+    "node-sass": "4.14.1",
+    "react": "^16.12.0",
+    "react-countup": "^4.3.3",
+    "react-dom": "^16.12.0",
+    "react-elastic-carousel": "^0.11.1",
+    "react-id-swiper": "^2.4.0",
+    "react-player": "^1.14.2",
+    "react-reveal": "^1.2.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.3.1",
+    "react-scripts": "3.4.0",
+    "react-scrollable-url": "^1.5.1",
+    "react-scrollspy": "^3.4.3",
+    "sanitize.css": "^11.0.0",
+    "styled-components": "^5.0.0",
+    "swiper": "^5.2.1",
+    "yup": "^0.28.0"
+  },
+  "devDependencies": {
+    "husky": "^4.2.3",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "react-snap": "^1.23.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not ie <= 11",
+      "not op_mini all",
+      "ie 10"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

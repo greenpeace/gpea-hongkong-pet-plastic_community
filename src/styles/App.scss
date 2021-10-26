@@ -1,0 +1,223 @@
+// root variables
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --black: #000;
+  --white: #fff;
+  --gp-green: #66cc00;
+  --orange: #ff9500;
+  --gp-dark-blue: #292f47;
+  --gray: #d9d9d9;
+  --light-gray: #f5f5f5;
+  // text
+  --title: #005f89;
+  --title-light: #77c1d3;
+  --text: #004367;
+  --sub-text: #004367;
+  --form-text: #004367;
+  --form-label: #004367;
+  // background
+  --bg-light-blue: #f5fcff;
+  //
+  --disable: #999;
+  --success: #52c41a;
+  --warning: #faad14;
+  --error: #f5222d;
+  --border: #c6c6c8;
+  --border-radius-base: 4px;
+  // shadow
+  --shadow--base: 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow--sm: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  --shadow--md: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  --shadow--lg: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  --shadow--xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow--2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow--inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --shadow--outer: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  // content fix size
+  --tablet-width: 768px;
+  --desktop-width: 1000px;
+}
+// import
+@import "./scss/bulma";
+@import "./scss/base";
+@import "./scss/typography";
+@import "./scss/override";
+//
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+}
+
+.loading--overlay {
+  z-index: 999;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+.app {
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+.main {
+  opacity: 0;
+  transition: 0.5s opacity ease;
+  &.fade-in {
+    opacity: 1;
+  }
+}
+
+.main-left {
+  overflow-x: hidden;
+  padding: 0;
+}
+// Form Modal
+.main-right {
+  background-color: #f5f5f5;
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem;
+  &.showFormModal {
+    margin: 0px;
+    padding: 0px;
+    z-index: 999;
+    display: block !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+// enform
+.enform-wrapper {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.enform-header {
+  margin-bottom: 1rem;
+  .welcome-message {
+    .header-text {
+      display: flex;
+      align-items: center;
+      .return-arrow {
+        cursor: pointer;
+        margin-right: 1rem;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.enform-body {
+  position: sticky;
+  top: 0;
+  min-height: 70vh;
+}
+
+.enform-note {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  small {
+    font-size: 0.8rem;
+    display: block;
+    color: var(--sub-text);
+    margin-bottom: 0.5rem;
+    &.has-star {
+      position: relative;
+      &:before {
+        content: "*";
+        font-size: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.enform-footer {
+  padding: 2rem 1rem;
+  font-size: 0.8rem;
+  background: #f5f5f5;
+  align-self: flex-end;
+  border: 2px solid var(--orange);
+  border-left: none;
+  border-right: none;
+}
+
+// mobile main button
+.main-button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 58px;
+  padding: 6px 20px;
+  box-shadow: var(--shadow);
+  background-color: #fff;
+  will-change: transform;
+  &.main-button--fixed {
+    z-index: 99;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  .scroll-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    .progress-bar {
+      background-color: blue;
+      height: 3px;
+      width: 0%;
+      transition: width 0.1s ease;
+    }
+  }
+  .button {
+    height: 48px;
+    width: 100%;
+    //background-color: var(--orange);
+    //color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}

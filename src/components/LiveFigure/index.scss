@@ -1,0 +1,141 @@
+.section-live-figure {
+  width: 100%;
+  position: relative;
+  background-color: #f5fcff;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+
+  .section-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 20px 60px;
+
+    .title-wrapper {
+      text-align: center;
+
+      .title-ribbon {
+        height: 70px;
+        margin: 0 auto;
+
+        &.mobile {
+          height: 44px;
+        }
+      }
+    }
+
+    .figure-container {
+      width: 90%;
+      max-width: 400px;
+      height: 400px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      position: relative;
+      margin: 40px auto;
+
+      span {
+        font-family: KozGoProHeavy, "Noto Sans HK", sans-serif !important;
+      }
+
+      .number {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5rem;
+        font-weight: 800;
+        letter-spacing: 7px;
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 0;
+        width: 100%;
+        font-family: KozGoProHeavy, "Noto Sans HK", sans-serif !important;
+      }
+
+      .unit {
+        position: absolute;
+        top: 28%;
+        right: 23%;
+        font-size: 2rem;
+        font-weight: 800;
+        font-family: KozGoProHeavy, "Noto Sans HK", sans-serif !important;
+      }
+
+      .loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 36px;
+      }
+    }
+
+    .button-wrapper {
+      max-width: 600px;
+      width: 80%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 auto;
+      gap: 10px;
+
+      .btn {
+        background: none;
+        color: var(--text);
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.1s ease-in;
+
+        &:hover {
+          transform: scale(1.1, 1.1);
+        }
+      }
+      img {
+        height: 80px;
+        filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
+        margin: 0 0 10px;
+      }
+
+      div {
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+      }
+    }
+
+    &.mobile {
+      padding-bottom: 20px;
+
+      .figure-container {
+        width: 250px;
+        height: 250px;
+
+        .number {
+          font-size: 3.3rem;
+        }
+
+        .unit {
+          top: 24%;
+          right: 20%;
+          font-size: 1.5rem;
+        }
+      }
+
+      .btn {
+        img {
+          width: 80%;
+        }
+
+        div {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    &.tablet {
+      width: var(--tablet-width);
+    }
+  }
+}

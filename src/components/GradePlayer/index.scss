@@ -1,0 +1,21 @@
+.section-grade-player {
+  width: 100%;
+  background-color: #c7e2b5;
+  margin: 0;
+
+  .content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0 100px;
+
+    .player-wrapper {
+      width: 90%;
+      height: 506px;
+      margin: 0 auto;
+
+      &.mobile {
+        height: 400px;
+      }
+    }
+  }
+}

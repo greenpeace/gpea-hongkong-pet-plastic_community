@@ -1,0 +1,48 @@
+.section-plastic-community {
+  width: 100%;
+  background-color: #f5fcff;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+
+  .section-content {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 20px 60px;
+
+    p {
+      text-align: center;
+    }
+
+    .community-figure {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .community-info {
+        width: 100%;
+      }
+
+      .community-map {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      i {
+        margin: 4px;
+      }
+    }
+  }
+
+  .footer-bar {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &.tablet {
+    width: var(--tablet-width);
+  }
+}

@@ -1,0 +1,60 @@
+#community-map {
+  // .st1,
+  // .st2,
+  // .st3,
+  // .st4,
+  // .st5,
+  // .st6,
+  // .st7,
+  // .st8,
+  // .st9,
+  // .st10,
+  // .st11,
+  // .st12,
+  // .st12,
+  // .st13,
+  // .st14,
+  // .st15,
+  // .st16,
+  // .st17,
+  // .st18,
+  // .st19,
+  // .st20,
+  // .st21 {
+  //   fill: #98ba7b;
+
+  //   &:hover {
+  //     fill: #999 !important;
+  //   }
+  // }
+
+  .area {
+    transition: all 0.1s;
+  }
+
+  .pin {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .chosen {
+    //transition-delay: 0.2s;
+    // path.area {
+    //   /fill: var(--title) !important;
+    // }
+
+    .pin {
+      visibility: visible;
+    }
+  }
+
+  .dist-group {
+    cursor: pointer;
+
+    &:hover {
+      path.area {
+        fill: var(--title) !important;
+      }
+    }
+  }
+}
