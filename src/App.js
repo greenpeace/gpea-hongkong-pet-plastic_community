@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import CommunityStory from "./pages/CommunityStory/";
 import Activity from "./pages/Activity/";
+import TsuenWan from "./pages/TsuenWan";
 import Footer from "./components/Footer";
 
 // hack to retrieve the current enform status
@@ -77,6 +78,12 @@ function App() {
           <div className="main-container">
             <Navbar />
             <Switch>
+              <Route
+                path="/TsuenWan"
+                render={() => (
+                  <TsuenWan devicetype={devicetype}/>
+                )}
+              />
               <Route
                 path="/communitystory/:id"
                 render={props => (

@@ -1,16 +1,9 @@
 import React, { useEffect } from "react";
 
 import Fade from "react-reveal/Fade";
-import Hero from "../../components/Hero";
-import LiveFigure from "../../components/LiveFigure";
-import Timeline from "../../components/Timeline";
-import Join from "../../components/Join";
-import Grade from "../../components/Grade";
-import Activity from "../../components/Activity";
-import CommunityStory from "../../components/CommunityStory";
+import Hero from "../../components/TsuenWanHero";
 import PlasticCommunity from "../../components/PlasticCommunity";
 import SupportUs from "../../components/SupportUs";
-import Scrollspy from "../../components/ScrollSpy";
 
 export default props => {
   const { devicetype, showActions } = props;
@@ -40,7 +33,10 @@ export default props => {
   }, []);
   return (
     <div>
-      <Fade>
+    <Fade>
+        <Hero sectionId="top" devicetype={devicetype} />
+      </Fade>
+      {/* <Fade>
         <Hero sectionId="top" devicetype={devicetype} />
       </Fade>
       <Fade>
@@ -60,7 +56,7 @@ export default props => {
       </Fade>
       <Fade>
         <CommunityStory sectionId="community-story" devicetype={devicetype} />
-      </Fade>
+      </Fade> */}
       <Fade>
         <PlasticCommunity
           sectionId="plastic-community"
