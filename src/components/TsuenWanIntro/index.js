@@ -2,18 +2,24 @@ import React from "react";
 import "./index.scss";
 
 import Logo from "../../assets/images/tsuen-wan/logo_horizontal.png";
+import Background from "../../assets/images/tsuen-wan/background_custom.svg";
 
 export default props => {
   return (
     <>
-      <div className="introSection">
-        {/* <div className="twLogoWrap">
+      <div
+        className="introSection"
+        style={{ backgroundImage: `url(${Background})` }}
+      >
+        <div className="twLogoWrap">
           <img src={Logo} />
-        </div> */}
+        </div>
 
         <div className="tw-intro-wrap">
           <div>
-            「走塑」不是一個人的事，亦不只得一個方式：自備餐具、拒用無謂包裝，或以社區網絡推動重用容器，抗衡即棄塑膠，一同建構我們理想的走塑社區。
+            「走塑」不是一個人的事，亦不只得一個方式：
+            <br />
+            自備餐具、拒用無謂包裝，或以社區網絡推動重用容器，抗衡即棄塑膠，一同建構我們理想的走塑社區。
           </div>
           <div>
             重用餐具借還流程:

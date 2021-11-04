@@ -1,8 +1,7 @@
 .introSection {
-  background-color: var(--bg-light-blue);
+  // background-color: var(--bg-light-blue);
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: top;
+  background-size: cover;
   padding: 140px;
 }
 
@@ -22,5 +21,6 @@
 @media (max-width: 575px) {
   .introSection {
     padding: 70px 20px;
+    background-image: none !important;
   }
 }
