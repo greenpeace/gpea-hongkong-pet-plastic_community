@@ -33,7 +33,7 @@ export default props => {
   }, []);
   return (
     <div>
-    <Fade>
+      <Fade>
         <Hero sectionId="top" devicetype={devicetype} />
       </Fade>
       {/* <Fade>
@@ -57,7 +57,7 @@ export default props => {
       <Fade>
         <CommunityStory sectionId="community-story" devicetype={devicetype} />
       </Fade> */}
-      <Fade>
+      {/* <Fade>
         <PlasticCommunity
           sectionId="plastic-community"
           devicetype={devicetype}
@@ -65,7 +65,7 @@ export default props => {
       </Fade>
       <Fade>
         <SupportUs sectionId="support-us" devicetype={devicetype} />
-      </Fade>
+      </Fade> */}
       {/* <Scrollspy devicetype={devicetype} showActions={showActions} /> */}
     </div>
   );
