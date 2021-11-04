@@ -70,7 +70,7 @@ export default props => {
       <Fade>
         <SupportUs sectionId="support-us" devicetype={devicetype} />
       </Fade>
-      {/* <Scrollspy devicetype={devicetype} showActions={showActions} /> */}
+      <Scrollspy devicetype={devicetype} showActions={showActions} />
     </div>
   );
 };

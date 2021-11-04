@@ -1,0 +1,26 @@
+.introSection {
+  background-color: var(--bg-light-blue);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+  padding: 140px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.tw-intro-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 575px) {
+  .introSection {
+    padding: 70px 20px;
+  }
+}
