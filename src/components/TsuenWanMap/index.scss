@@ -19,6 +19,7 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
+  margin-bottom: 60px;
   .twMapTitle {
     max-width: 380px;
   }
@@ -43,16 +44,19 @@
 
 .map-responsive iframe {
   left: 0;
-  top: -60px; //Force remove google map header
+  // top: -60px; //Force remove google map header
   border: none;
   height: 100%;
   width: 100%;
   position: absolute;
+  overflow: hidden;
 }
 
 .tw-map-wrap {
   max-width: 1000px;
   margin: 30px auto;
+  overflow: hidden;
+  padding: 12px;
 }
 
 @media (max-width: 575px) {

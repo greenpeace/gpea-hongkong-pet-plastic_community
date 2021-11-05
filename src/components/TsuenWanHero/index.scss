@@ -2,10 +2,12 @@
   padding: 140px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .row {
   display: flex;
+  align-items: center;
 }
 
 .column {
@@ -17,13 +19,21 @@
   margin: 30px auto;
 }
 
-.tw-main-description {
-  margin: 0px;
+.tw-main-description-wrap {
   background-color: #f5ecd0;
   border-radius: 8px;
-  padding: 20px;
-  margin: 0 auto;
   max-width: 520px;
+  margin: 0 auto;
+  padding: 5px;
+  box-shadow: 0 0 10px #f5ecd0;
+}
+
+.tw-main-description {
+  background-color: #f5ecd0;
+  border-radius: 8px;
+  max-width: 520px;
+  border: 2px solid #005f89;
+  padding: 20px;
   span {
     background-color: #ff5021;
     display: inline-block;
@@ -37,7 +47,49 @@
 
 .carousel-wrapper-tw {
   max-width: 1200px;
+  position: relative;
   margin: 0;
+
+  /* square buttons */
+  .rec.rec-arrow {
+    border-radius: 0;
+    color: inherit !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+  /* round buttons on hover */
+  .rec.rec-arrow:hover {
+    border-radius: none !important;
+    color: inherit !important;
+    box-shadow: none !important;
+  }
+  /* hide disabled buttons */
+  .rec.rec-arrow:disabled {
+    visibility: visible;
+  }
+  /* disable default outline on focused items */
+  /* add custom outline on focused items */
+  .rec-carousel-item:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .rec-arrow {
+    position: absolute;
+    bottom: -10px;
+  }
+
+  .rec.rec-arrow-left {
+    left: 10px;
+  }
+
+  .rec.rec-arrow-right {
+    right: 10px;
+  }
+
+  .rec-dot_active {
+    box-shadow: 0 0 1px 3px #005f89 !important;
+  }
 
   .slice {
     width: 100%;
@@ -118,9 +170,21 @@
   }
 }
 
+@media (max-width: 1440px) {
+  .twHeroSectionWrap {
+    padding: 140px 70px 70px;
+  }
+}
+
 @media (max-width: 575px) {
   .twHeroSectionWrap {
     padding: 140px 20px 70px;
+    background-position: 0px 100px;
+  }
+
+  .tw-main-description-wrap {
+    margin-top: 40px;
+    margin-bottom: 30px;
   }
 
   .hero-column {

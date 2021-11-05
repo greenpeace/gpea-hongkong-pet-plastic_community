@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 140px;
+  background-position: center center;
 }
 
 .row {
@@ -13,6 +14,10 @@
   flex: 50%;
 }
 
+.twLogoWrap {
+  margin-bottom: 60px;
+}
+
 .tw-intro-wrap {
   max-width: 1000px;
   margin: 0 auto;
@@ -21,6 +26,7 @@
 @media (max-width: 575px) {
   .introSection {
     padding: 70px 20px;
-    background-image: none !important;
+    // background-image: none !important;
+    // background-position: left center;
   }
 }
