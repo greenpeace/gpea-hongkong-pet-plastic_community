@@ -32,6 +32,17 @@
   min-width: 100px;
 }
 
+.tw-intro {
+  .subtitle {
+    color: var(--text);
+    margin: 20px 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-align: center;
+  }
+}
+
 @media (max-width: 1024px) {
   .introSection {
     padding: 70px 30px;

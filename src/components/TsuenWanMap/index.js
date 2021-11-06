@@ -1,8 +1,8 @@
 import React from "react";
 import "./index.scss";
 
-import IconLeft from "../../assets/images/tsuen-wan/GP_PlasticFreeStickers_w.png";
-import IconRight from "../../assets/images/tsuen-wan/GP_PlasticFreeStickers_b.png";
+import IconLeft from "../../assets/images/tsuen-wan/PFC_Sticker_blue.png";
+import IconRight from "../../assets/images/tsuen-wan/PFC_Sticker_white.png";
 import Title from "../../assets/images/tsuen-wan/demo_title.svg";
 
 export default props => {
@@ -23,7 +23,7 @@ export default props => {
 
         <div className="tw-map-wrap">
           <div className="map-responsive">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1FWC3p6FNTkr_fzqkowE4kizZy28mGV2x&z=16&ll=22.371751955858638, 114.11726192723083"></iframe>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1FWC3p6FNTkr_fzqkowE4kizZy28mGV2x&&ll=22.372632748008964%2C114.11543116116347&z=17"></iframe>
           </div>
         </div>
       </div>

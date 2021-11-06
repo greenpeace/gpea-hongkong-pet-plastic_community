@@ -19,9 +19,10 @@ export default props => {
         <div className="tw-intro-wrap">
           <div className="row">
             <div className="column">
-              <div>
-                <b>「走塑」不是一個人的事，亦不只得一個方式</b>
-                <br />
+              <div className="tw-intro">
+                <div className="subtitle">
+                  「走塑」不是一個人的事，亦不只得一個方式
+                </div>
                 自備餐具、拒用無謂包裝，或以社區網絡推動重用容器，抗衡即棄塑膠，一同建構我們理想的走塑社區。
                 <br />
                 <br />
