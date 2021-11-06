@@ -1,5 +1,5 @@
 .twHeroSectionWrap {
-  padding: 140px;
+  padding: 140px 140px 70px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -164,7 +164,7 @@
 
   &.mobile {
     .slice {
-      height: 480px;
+      height: auto;
     }
   }
 }
@@ -179,7 +179,7 @@
   .twHeroSectionWrap {
     padding: 140px 30px 70px;
     background-size: cover;
-    background-position: 0px 100px;
+    background-position: 0px 180px;
   }
 
   .tw-main-description-wrap {
