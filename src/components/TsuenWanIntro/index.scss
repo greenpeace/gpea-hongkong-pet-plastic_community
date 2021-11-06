@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 140px;
-  background-position: center center;
+  background-size: 100% 100%;
 }
 
 .row {
@@ -14,8 +14,13 @@
   flex: 50%;
 }
 
-.twLogoWrap {
-  margin-bottom: 60px;
+.stepWrap {
+  max-width: 380px;
+  float: right;
+}
+
+.stepWrap::after {
+  clear: both;
 }
 
 .tw-intro-wrap {
@@ -23,10 +28,36 @@
   margin: 0 auto;
 }
 
-@media (max-width: 575px) {
+.dateWrap {
+  min-width: 100px;
+}
+
+@media (max-width: 1024px) {
   .introSection {
-    padding: 70px 20px;
-    // background-image: none !important;
+    padding: 70px 30px;
+    background-image: none !important;
     // background-position: left center;
+  }
+
+  .dateWrap {
+    min-width: 85px;
+  }
+
+  .stepWrap {
+    max-width: 380px;
+    float: unset;
+    margin: 0 auto;
+  }
+
+  .tw-intro-wrap {
+    .column {
+      flex: 100%;
+    }
+    .tw-main-description {
+      margin: 0px;
+    }
+    .stepWrap {
+      margin-top: 30px;
+    }
   }
 }
