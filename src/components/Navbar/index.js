@@ -9,24 +9,27 @@ import "./index.scss";
 function Navbar() {
   const location = useLocation();
   const [click, setClick] = useState(false);
-  const [hideNav, setHideNav] = useState(location.pathname === '/TsuenWan');
+  const [hideNav, setHideNav] = useState(location.pathname === "/TsuenWan");
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
   useEffect(() => {
-    setHideNav(location.pathname === '/TsuenWan')
+    setHideNav(location.pathname === "/TsuenWan");
   }, [location.pathname]);
-  
 
-  const NAV = hideNav ? [] : [{label: '首頁', value: 'intro'}, 
-  {label: '走塑歷程', value: 'timeline'},
-  {label: '加入團隊', value: 'join'},
-  {label: '走塑等級', value: 'grade'},
-  {label: '活動情報', value: 'activity'},
-  {label: '走塑地圖', value: 'plastic-community'},
-  {label: '荃灣', value: 'TsuenWan'},
-  {label: '支持我們', value: 'support-us'}]
+  const NAV = hideNav
+    ? []
+    : [
+        { label: "首頁", value: "intro" },
+        { label: "走塑歷程", value: "timeline" },
+        { label: "加入團隊", value: "join" },
+        { label: "走塑等級", value: "grade" },
+        { label: "活動情報", value: "activity" },
+        { label: "走塑地圖", value: "plastic-community" },
+        { label: "唔該借借", value: "TsuenWan" },
+        { label: "支持我們", value: "support-us" }
+      ];
 
   return (
     <>
@@ -41,16 +44,18 @@ function Navbar() {
           </div>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-          {NAV.map(d=><li className={`nav-item ${hideNav && `hide`}`}  key={d.label}>
-              <HashLink
-                smooth
-                to={`/${d.value}`}
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                {d.label}
-              </HashLink>
-            </li>)}
+            {NAV.map(d => (
+              <li className={`nav-item ${hideNav && `hide`}`} key={d.label}>
+                <HashLink
+                  smooth
+                  to={`/${d.value}`}
+                  className="nav-links"
+                  onClick={closeMobileMenu}
+                >
+                  {d.label}
+                </HashLink>
+              </li>
+            ))}
             {/* <li className="nav-item">
               <HashLink
                 smooth
@@ -132,13 +137,13 @@ function Navbar() {
               </HashLink>
             </li> */}
             <li>
-            <HashLink
+              <HashLink
                 smooth
                 to="/#intro"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                 <img src={PlasticFreeLogo} className="pf-logo" alt="全城走塑" />
+                <img src={PlasticFreeLogo} className="pf-logo" alt="全城走塑" />
               </HashLink>
             </li>
           </ul>
