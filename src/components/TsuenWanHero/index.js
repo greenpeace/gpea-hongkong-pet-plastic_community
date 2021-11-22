@@ -16,15 +16,16 @@ import CoverSm from "../../assets/images/hero-video/cover-sm.jpg";
 import Mp4 from "../../assets/videos/tsuen-wan/IMG_7761.mp4";
 import Webm from "../../assets/videos/tsuen-wan/IMG_7761.webm";
 
+import Video1mp4 from "../../assets/videos/tsuen-wan/FINAL_v2_720(VIU_VERSION).mp4";
+import Video1Webm from "../../assets/videos/tsuen-wan/FINAL_v2_720(VIU_VERSION).webm";
+
+import Video2mp4 from "../../assets/videos/tsuen-wan/FINAL_BB_(1920x1080).mp4";
+import Video2Webm from "../../assets/videos/tsuen-wan/FINAL_BB_(1920x1080).webm";
+
 export default props => {
   let resetTimeout;
   const { sectionId, devicetype } = props;
-  const breakPoints = [
-    { width: 1, itemsToShow: 1 }
-    // { width: 550, itemsToShow: 1 },
-    // { width: 768, itemsToShow: 2 },
-    // { width: 1000, itemsToShow: 3 },
-  ];
+  const breakPoints = [{ width: 1, itemsToShow: 1 }];
 
   const CardData = [
     { id: 1, src: Slide1 },
@@ -45,6 +46,8 @@ export default props => {
       carouselRef.current.goTo(CardData.length);
     }
   };
+
+  const [isAutoPlay, setAutoPlay] = React.useState(false);
 
   return (
     <>
@@ -77,39 +80,93 @@ export default props => {
                   className="carousel-slice"
                   showArrows={true}
                   pagination={true}
-                  enableAutoPlay
+                  enableAutoPlay={isAutoPlay}
                   autoPlaySpeed={5000}
                   ref={carouselRef}
                   onPrevStart={onPrevStart}
                   onNextStart={onNextStart}
-                  onNextEnd={({ index }) => {
-                    clearTimeout(resetTimeout);
-                    if (index + 1 === CardData.length) {
-                      resetTimeout = setTimeout(() => {
-                        carouselRef.current.goTo(0);
-                      }, 5000);
-                    }
+                  // onNextEnd={({ index }) => {
+                  //   clearTimeout(resetTimeout);
+                  //   if (index + 1 === CardData.length) {
+                  //     resetTimeout = setTimeout(() => {
+                  //       carouselRef.current.goTo(0);
+                  //     }, 5000);
+                  //   }
+                  // }}
+                  onChange={(currentItem, pageIndex) => {
+                    pageIndex === 0 || pageIndex === 6
+                      ? setAutoPlay(false)
+                      : setAutoPlay(true);
                   }}
                   disableArrowsOnEnd={false}
                 >
+                  <div className="slice slice-video">
+                    <div
+                      className="slice-img-frame"
+                      style={{
+                        backgroundImage: `url(${CoverSm})`,
+                        display: "flex"
+                      }}
+                    >
+                      <div style={{ padding: "20px", alignSelf: "center" }}>
+                        <video
+                          muted
+                          autoPlay={true}
+                          controls={true}
+                          onEnded={() => carouselRef.current.goTo(1)}
+                        >
+                          <source src={Video1mp4} type="video/mp4" />
+                          <source src={Video1Webm} type="video/webm" />
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
                   {CardData.slice(0).map(card => (
                     <div key={card.id} className="slice">
                       <div
                         className="slice-img-frame"
                         style={{ backgroundImage: `url(${card.src})` }}
-                      >
-                        {/* <img
-                          src={card.character}
-                          className="character"
-                          alt=""
-                        /> */}
-                      </div>
-                      {/* <div className="slice-body">
-                          <div className="slice-text">試吓講2句</div>
-                        </div>
-                        <div className="slice-backdrop"></div> */}
+                      ></div>
                     </div>
                   ))}
+
+                  <div className="slice slice-video">
+                    <div
+                      className="slice-img-frame"
+                      style={{
+                        backgroundImage: `url(${CoverSm})`,
+                        display: "flex"
+                      }}
+                    >
+                      <div style={{ padding: "20px", alignSelf: "center" }}>
+                        <video
+                          muted
+                          autoPlay={true}
+                          controls={true}
+                          onEnded={() => carouselRef.current.goTo(0)}
+                        >
+                          <source src={Video2mp4} type="video/mp4" />
+                          <source src={Video2Webm} type="video/webm" />
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                  {/* <div
+                    className="slice slice-video"
+                    style={{ background: `url(${CoverSm})` }}
+                  >
+                    <video
+                      muted
+                      autoPlay={false}
+                      poster={CoverSm}
+                      controls={false}
+                      onEnded={() => carouselRef.current.goTo(0)}
+                    >
+                      <source src={Video2mp4} type="video/mp4" />
+                      <source src={Video2Webm} type="video/webm" />
+                    </video>
+                  </div> */}
                 </Carousel>
               </div>
             </div>
