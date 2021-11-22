@@ -24,11 +24,7 @@ export default props => {
 
         <div className={`activity-wrapper ${devicetype}`}>
           {CardData.map((card, i, arr) => (
-            <Link
-              key={card.id}
-              to={`/activity/${card.id}`}
-              devicetype={devicetype}
-            >
+            <Link key={card.id} to={card.href} devicetype={devicetype}>
               <div className="card">
                 <div
                   className="img-frame"

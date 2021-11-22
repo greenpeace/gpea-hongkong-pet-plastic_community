@@ -5,6 +5,7 @@ const data = [
     id: "1",
     title: "走塑社區游擊小隊",
     date: "「現正招募中」",
+    href: "/activity/1",
     thumbnail: require("../../assets/images/activity/activity1/thumbnail.jpg"),
     banner: require("../../assets/images/activity/activity1/banner-lg.jpg"),
     content: (
@@ -33,6 +34,7 @@ const data = [
     id: "2",
     title: "游擊小隊最新大型行動 - 走塑大Hunt",
     date: "「現正招募中」",
+    href: "/activity/2",
     thumbnail: require("../../assets/images/activity/activity2/IMG_4249_thunbnail.jpg"),
     banner: require("../../assets/images/activity/activity2/IMG_4249_long.jpg"),
     content: (
@@ -72,6 +74,7 @@ const data = [
     id: "3",
     title: "網上共學教室「綠色社區點做起？達人同你渾身解塑」",
     date: "「現正招募中」",
+    href: "/activity/3",
     thumbnail: require("../../assets/images/activity/activity3/a24905ab-classroom_feature2.jpg"),
     banner: require("../../assets/images/activity/activity3/a24905ab-classroom_feature2_long.jpg"),
     content: (
@@ -102,6 +105,7 @@ const data = [
     id: "4",
     title: "一連四日 - 社區走塑工作坊",
     date: "「21/6 截止報名！」",
+    href: "/activity/4",
     thumbnail: require("../../assets/images/activity/activity4/20210508_SSPHunting_38.jpg"),
     banner: require("../../assets/images/activity/activity4/20210508_SSPHunting_38_long.jpg"),
     content: (
@@ -151,6 +155,15 @@ const data = [
         </a>
       </>
     )
+  },
+  {
+    id: "5",
+    title: "唔該借借",
+    href: "TsuenWan",
+    date: "",
+    thumbnail: require("../../assets/images/activity/activity5/tw_thumbnail.jpg"),
+    banner: require("../../assets/images/activity/activity5/tw_thumbnail.jpg"),
+    content: ""
   }
 ];
 

@@ -46,6 +46,20 @@
   }
 }
 
+.map-responsive {
+  border-top: 10px solid #fff;
+  border-radius: 8px;
+}
+
+.map-responsive {
+  iframe {
+    border-right: 10px solid #fff;
+    border-left: 10px solid #fff;
+    border-bottom: 10px solid #fff;
+    border-radius: 8px;
+  }
+}
+
 @media (max-width: 1024px) {
   .introSection {
     padding: 70px 30px;

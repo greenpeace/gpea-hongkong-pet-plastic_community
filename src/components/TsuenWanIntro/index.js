@@ -39,7 +39,9 @@ export default props => {
                 <br />
                 <div style={{ display: "flex" }}>
                   <div className="dateWrap">活動日期:</div>
-                  <div>2021年11月27、2021年12月18日、2022年 1月15日</div>
+                  <div>
+                    2021年11月27日、2021年12月11日、2022年 1月15日(星期六)
+                  </div>
                 </div>
                 活動時間: 中午12時 - 下午5時
               </div>
