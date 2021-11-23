@@ -1,4 +1,4 @@
-import React, { consts, Button } from "react";
+import React from "react";
 import Carousel from "react-elastic-carousel";
 import "./index.scss";
 
@@ -57,7 +57,7 @@ export default props => {
       >
         <div className="twHero hero-column">
           <div className="row">
-            <div className="column">
+            <div className="">
               <div className="twLogoWrap">
                 <img src={Logo} />
                 {/* <video muted autoPlay={true} poster={CoverSm} controls={true}>
@@ -73,7 +73,7 @@ export default props => {
                 </div>
               </div>
             </div>
-            <div className="column">
+            <div className="column cus-column">
               <div className={`carousel-wrapper-tw ${devicetype}`}>
                 <Carousel
                   breakPoints={breakPoints}
@@ -108,7 +108,7 @@ export default props => {
                         display: "flex"
                       }}
                     >
-                      <div style={{ padding: "20px", alignSelf: "center" }}>
+                      <div style={{ alignSelf: "center" }}>
                         <video
                           muted
                           autoPlay={true}
@@ -139,7 +139,7 @@ export default props => {
                         display: "flex"
                       }}
                     >
-                      <div style={{ padding: "20px", alignSelf: "center" }}>
+                      <div style={{ alignSelf: "center" }}>
                         <video
                           muted
                           autoPlay={true}
