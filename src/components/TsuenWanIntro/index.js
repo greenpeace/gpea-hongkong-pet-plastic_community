@@ -13,7 +13,7 @@ export default props => {
         style={{ backgroundImage: `url(${Background})` }}
       >
         <div className="twLogoWrap">
-          <img src={Logo} />
+          <img src={Logo} alt="logo" />
         </div>
 
         <div className="tw-intro-wrap">
@@ -48,7 +48,7 @@ export default props => {
             </div>
             <div className="column">
               <div className="stepWrap">
-                <img src={Step} />
+                <img src={Step} alt="步驟" />
               </div>
             </div>
           </div>

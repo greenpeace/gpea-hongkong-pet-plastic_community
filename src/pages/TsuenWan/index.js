@@ -6,7 +6,6 @@ import Map from "../../components/TsuenWanMap";
 import Intro from "../../components/TsuenWanIntro";
 import SupportUs from "../../components/TsuenWanSupportUs";
 import CommunityStory from "../../components/CommunityStory";
-import Scrollspy from "../../components/ScrollSpy";
 
 export default props => {
   const { devicetype, showActions } = props;

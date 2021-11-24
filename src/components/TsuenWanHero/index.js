@@ -12,9 +12,9 @@ import Slide3 from "../../assets/images/tsuen-wan/slide_003.jpeg";
 import Slide4 from "../../assets/images/tsuen-wan/slide_004.jpeg";
 import Slide5 from "../../assets/images/tsuen-wan/slide_005.jpeg";
 
-import CoverSm from "../../assets/images/hero-video/cover-sm.jpg";
-import Mp4 from "../../assets/videos/tsuen-wan/IMG_7761.mp4";
-import Webm from "../../assets/videos/tsuen-wan/IMG_7761.webm";
+// import CoverSm from "../../assets/images/tsuen-wan/background_custom.svg";
+// import Mp4 from "../../assets/videos/tsuen-wan/IMG_7761.mp4";
+// import Webm from "../../assets/videos/tsuen-wan/IMG_7761.webm";
 
 import Video1mp4 from "../../assets/videos/tsuen-wan/FINAL_v2_720(VIU_VERSION).mp4";
 import Video1Webm from "../../assets/videos/tsuen-wan/FINAL_v2_720(VIU_VERSION).webm";
@@ -23,9 +23,10 @@ import Video2mp4 from "../../assets/videos/tsuen-wan/FINAL_BB_(1920x1080).mp4";
 import Video2Webm from "../../assets/videos/tsuen-wan/FINAL_BB_(1920x1080).webm";
 
 export default props => {
-  let resetTimeout;
-  const { sectionId, devicetype } = props;
+  const { devicetype } = props;
   const breakPoints = [{ width: 1, itemsToShow: 1 }];
+  const [isAutoPlay, setAutoPlay] = React.useState(false);
+  const isDesktop = devicetype === "desktop";
 
   const CardData = [
     { id: 1, src: Slide1 },
@@ -47,7 +48,7 @@ export default props => {
     }
   };
 
-  const [isAutoPlay, setAutoPlay] = React.useState(false);
+  console.log("isAutoPlay-", isAutoPlay);
 
   return (
     <>
@@ -57,9 +58,9 @@ export default props => {
       >
         <div className="twHero hero-column">
           <div className="row">
-            <div className="">
+            <div className="column">
               <div className="twLogoWrap">
-                <img src={Logo} />
+                <img src={Logo} alt="logo" />
                 {/* <video muted autoPlay={true} poster={CoverSm} controls={true}>
                   <source src={Mp4} type="video/mp4" />
                   <source src={Webm} type="video/webm" />
@@ -94,9 +95,11 @@ export default props => {
                   //   }
                   // }}
                   onChange={(currentItem, pageIndex) => {
-                    pageIndex === 0 || pageIndex === 6
-                      ? setAutoPlay(false)
-                      : setAutoPlay(true);
+                    if (pageIndex === 0 || pageIndex === 6) {
+                      setAutoPlay(false);
+                    } else {
+                      setAutoPlay(true);
+                    }
                   }}
                   disableArrowsOnEnd={false}
                 >
@@ -104,8 +107,9 @@ export default props => {
                     <div
                       className="slice-img-frame"
                       style={{
-                        backgroundImage: `url(${CoverSm})`,
+                        // backgroundImage: `url(${CoverSm})`,
                         display: "flex"
+                        // padding: "0 10px",
                       }}
                     >
                       <div style={{ alignSelf: "center" }}>
@@ -135,8 +139,9 @@ export default props => {
                     <div
                       className="slice-img-frame"
                       style={{
-                        backgroundImage: `url(${CoverSm})`,
+                        // backgroundImage: `url(${CoverSm})`,
                         display: "flex"
+                        // padding: "0 10px",
                       }}
                     >
                       <div style={{ alignSelf: "center" }}>
