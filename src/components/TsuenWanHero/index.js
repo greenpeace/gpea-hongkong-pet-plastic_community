@@ -48,8 +48,6 @@ export default props => {
     }
   };
 
-  console.log("isAutoPlay-", isAutoPlay);
-
   return (
     <>
       <div
