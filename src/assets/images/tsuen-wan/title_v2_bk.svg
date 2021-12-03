@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="19px" viewBox="0 0 100 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>demo_title</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="demo_title" transform="translate(0.000000, -2.000000)">
+            <polygon id="Path" fill="#005F89" fill-rule="nonzero" points="91.0591111 11.1623333 100 2 8.94266667 2 0 11.1623333 8.94266667 20.3262222 100 20.3262222"></polygon>
+            <g id="Group" transform="translate(20.666667, 0.888889)" fill="#FFFFFF" font-family="SweiB2SansCJKtc-Bold, 獅尾B2黑體" font-size="13.5" font-weight="bold" letter-spacing="0.940178454">
+                <text id="走塑地圖">
+                    <tspan x="0.333333333" y="15.1111111">走塑地圖</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
