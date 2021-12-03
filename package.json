@@ -4,7 +4,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:en": "PUBLIC_URL=https://change.greenpeace.org.hk/app/plastic-community react-scripts build",
+    "build:en": "PUBLIC_URL=https://change.greenpeace.org.hk/app/plastic-community-preview react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "npm run build:en && gpea-npm-en-uploader"

@@ -1,0 +1,262 @@
+.twHeroSectionWrap {
+  padding: 200px 140px 140px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.column {
+  flex: 50%;
+}
+
+.twLogoWrap {
+  max-width: 300px;
+  margin: 30px auto;
+}
+
+.tw-main-description-wrap {
+  background-color: #f5ecd0;
+  border-radius: 8px;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 5px;
+  box-shadow: 0 0 10px #f5ecd0;
+}
+
+.tw-main-description {
+  background-color: #f5ecd0;
+  border-radius: 8px;
+  max-width: 520px;
+  border: 2px solid #005f89;
+  padding: 20px;
+  span {
+    background-color: #ff5021;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 0 5px;
+    color: #fff;
+    transform: rotate(-5deg);
+    position: relative;
+  }
+}
+
+.carousel-wrapper-tw {
+  max-width: 1200px;
+  position: relative;
+  margin: 0;
+
+  /* square buttons */
+  .rec.rec-arrow {
+    border-radius: 0;
+    color: inherit !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+  /* round buttons on hover */
+  .rec.rec-arrow:hover {
+    border-radius: none !important;
+    color: inherit !important;
+    box-shadow: none !important;
+  }
+  /* hide disabled buttons */
+  .rec.rec-arrow:disabled {
+    visibility: visible;
+  }
+  /* disable default outline on focused items */
+  /* add custom outline on focused items */
+  .rec-carousel-item:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .rec-arrow {
+    position: absolute;
+    bottom: -10px;
+  }
+
+  .rec.rec-arrow-left {
+    left: 10px;
+  }
+
+  .rec.rec-arrow-right {
+    right: 10px;
+  }
+
+  .rec-dot_active {
+    box-shadow: 0 0 1px 3px #005f89 !important;
+  }
+
+  .slice {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    // background-color: #f5fcff;
+    border-radius: 10px;
+    padding: 30px 15px 70px;
+    margin: 0 2px;
+    position: relative;
+    background-size: cover !important;
+
+    &::before {
+      content: "";
+      position: absolute;
+      // background-color: white;
+      width: 60%;
+      height: 6px;
+      border-radius: 6px;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .slice-img-frame {
+      width: 100%;
+      height: 440px;
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      border-radius: 10px;
+      position: relative;
+
+      .character {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 40%;
+      }
+    }
+
+    .slice-body {
+      color: white;
+      margin-top: 20px;
+
+      .slice-title {
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        line-height: 1.3;
+        letter-spacing: 1px;
+      }
+      .slice-text {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        color: white;
+        line-height: 1.2;
+      }
+    }
+    .slice-button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      height: 36px;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .slice-video {
+    padding: 30px 15px;
+    height: 100%;
+  }
+
+  &.mobile {
+    .slice {
+      height: auto;
+    }
+  }
+}
+
+.rec-carousel-item {
+  align-self: center;
+}
+
+.cus-column {
+  width: 780px;
+}
+
+.twHero {
+  .row .column:first-child {
+    flex: auto;
+  }
+}
+
+@media (max-width: 1440px) {
+  .twHeroSectionWrap {
+    padding: 140px 70px 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .twHeroSectionWrap {
+    padding: 140px 30px 70px;
+    background-size: cover;
+    background-position: 0px 180px;
+  }
+
+  .tw-main-description-wrap {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .hero-column {
+    .twLogoWrap {
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    .column {
+      flex: 100%;
+    }
+    .tw-main-description {
+      margin: 0px;
+    }
+  }
+
+  .carousel-wrapper-tw {
+    max-width: 460px;
+    margin: 0 auto;
+
+    .slice {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 340px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 0px;
+      margin: 20px 0 0 0;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: white;
+        width: 60%;
+        height: 6px;
+        border-radius: 6px;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .slice-img-frame {
+        width: 100%;
+        height: 320px;
+        background-color: #fff;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        border-radius: 10px;
+        position: relative;
+      }
+    }
+  }
+}
