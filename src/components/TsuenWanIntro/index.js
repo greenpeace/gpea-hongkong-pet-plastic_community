@@ -28,7 +28,7 @@ export default props => {
                 </div>
                 <br />
                 <div>
-                  <b>重用餐具借還流程:</b>
+                  <b>重用餐具借還流程：</b>
                   <br />
                   1.直接於店鋪借重用餐具(無需按金)
                   <br />
@@ -37,15 +37,12 @@ export default props => {
                 </div>
                 <br />
                 <div>
-                  - 活動地點: 荃灣路德圍
+                  <span className="datewrap">活動地點：</span>荃灣路德圍
                   <br />
-                  <div style={{ display: "flex" }}>
-                    <div className="dateWrap">- 活動日期:</div>
-                    <div>
-                      2021年11月27日、2021年12月11日、2022年 1月15日(星期六)
-                    </div>
-                  </div>
-                  - 活動時間: 中午12時 - 下午5時
+                  <span className="datewrap">活動日期：</span>
+                  2021年11月27日、2021年12月11日、2022年1月15日（星期六）
+                  <br />
+                  <span className="datewrap">活動時間：</span>中午12時 - 下午5時
                   <br />
                   <b>
                     <small>
