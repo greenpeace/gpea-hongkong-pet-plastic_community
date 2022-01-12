@@ -23,7 +23,6 @@
     "gpea-npm-en-uploader": "greenpeace/gpea-npm-en-uploader",
     "lodash": "^4.17.20",
     "mitt": "^1.2.0",
-    "node-sass": "4.14.1",
     "react": "^16.12.0",
     "react-countup": "^4.3.3",
     "react-dom": "^16.12.0",
@@ -38,6 +37,7 @@
     "react-scrollable-url": "^1.5.1",
     "react-scrollspy": "^3.4.3",
     "sanitize.css": "^11.0.0",
+    "sass": "^1.47.0",
     "styled-components": "^5.0.0",
     "swiper": "^5.2.1",
     "yup": "^0.28.0"
