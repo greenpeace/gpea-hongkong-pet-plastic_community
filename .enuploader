@@ -17,7 +17,7 @@ module.exports = {
     // EDIT_HERE: Which ftp site you want to use
     execute: true,
     localDir: buildDirPath,
-    remoteDir: '/app/plastic-community-preview', // EDIT_HERE
+    remoteDir: '/app/plastic-community', // EDIT_HERE
   }),
 
   enBase: Object.assign({}, secrets['en'], {
