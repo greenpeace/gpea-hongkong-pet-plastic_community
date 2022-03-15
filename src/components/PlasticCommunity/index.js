@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDistrictRestaurans } from "./hooks";
 import CommunityMap from "./CommunityMap/CommunityMap.js";
 import CommunityInfo from "./CommunityInfo/CommunityInfo.js";
+import Map from "../../components/Map";
 
 import TitleRibbon from "../common/titleRibbon";
 import Title from "../../assets/images/plastic-community/title.svg";
@@ -43,7 +44,9 @@ export default props => {
           <p>立即尋找「全城走塑」商戶位置，再靠您與我們一起擴大版圖。</p>
         )}
 
-        <figure className="community-figure">
+        <Map devicetype={devicetype} />
+
+        {/* <figure className="community-figure">
           <CommunityMap
             chosenDistrictId={chosenDistrictId}
             onChooseDistrictId={districtId => {
@@ -58,7 +61,7 @@ export default props => {
               setChosenDistrictId(districtId);
             }}
           />
-        </figure>
+        </figure> */}
       </div>
 
       <div className="footer-bar">
