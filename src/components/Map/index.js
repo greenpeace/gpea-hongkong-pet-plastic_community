@@ -17,6 +17,7 @@ export default props => {
         }}
       >
         <iframe
+          title="走塑地圖"
           className={mapClass}
           src="https://www.google.com/maps/d/embed?mid=1FWC3p6FNTkr_fzqkowE4kizZy28mGV2x&ehbc=2E312F"
         ></iframe>
